@@ -1,0 +1,19 @@
+.tab-link::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 3px;
+  background: #39ff14;
+  transition: width .3s;
+  position: relative;
+  z-index: 9999 ;
+  /* cursor: none; */
+}
+  
+.tab-link:hover::after {
+  width: 100%;
+  transition: width .3s;
+  z-index: 9999 ;
+  /* cursor: none; */
+}
+
