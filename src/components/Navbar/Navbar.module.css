@@ -1,0 +1,44 @@
+.nav-link {
+  cursor: none;
+}
+  
+.nav-link::before {
+  content: '';
+  display: block;
+  width: 0;
+  height: 3px;
+  background: #39ff14;
+  transition: width .3s;
+  position: relative;
+  z-index: 9999 ;
+}
+
+.nav-link:hover::before {
+  width: 100%;
+  transition: width .3s;
+  z-index: 9999 ;
+}
+  
+/* .button {
+  background: transparent;
+  position: relative;
+  transition: 0.5s ease-in-out;
+}
+
+.button::before{
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: #d34500;
+  z-index: -1;
+  transition: 0.5s ease-in-out;
+  clip-path: circle(0% at 50% 50%);
+}
+
+.button:hover {
+  color: white
+}
+
+.button:hover::before{
+  clip-path: circle(100% at 50% 50%);
+} */
