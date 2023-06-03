@@ -1,13 +1,13 @@
-import React from 'react'
+// import React from 'react'
 import { AiOutlinePlus } from 'react-icons/ai'
 import { Link } from 'react-router-dom'
 
 const BlogPost = () => {
   return (
-      <div id="section-9" className="px-32 py-48">
+      <div id="section-9" className="lg:px-32 px-4 lg:py-48 py-28">
       <h2 className="text-4xl font-medium mb-12">Latest blog posts</h2>
 
-      <ul className="grid grid-cols-3 gap-6">
+      <ul className="grid grid-flow-row lg:grid-cols-3 lg:gap-6 gap-20">
         <li>
           <img src="https://globefarer.qodeinteractive.com/wp-content/uploads/2021/08/maih-home-blog-img1.jpg" width={350} alt=""/>
 

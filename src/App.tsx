@@ -13,7 +13,7 @@ import RequestFreight from './pages/RequestFreight';
 
 function App() {
   const [isInverted, setIsInverted] = useState(false)
-  const [stickyClass, setStickyClass] = useState('absolute w-full z-50 bg-[transparent] border-b border-white text-white');
+  const [stickyClass, setStickyClass] = useState('lg:absolute lg:w-full lg:z-50 lg:bg-[transparent] border-b lg:border-white lg:text-white fixed top-0 left-0 z-50 bg-white w-full text-[#1b1b1b] border-b border-gray');
   const location = useLocation()
 
 
@@ -41,7 +41,7 @@ function App() {
       setStickyClass('absolute w-full z-50 bg-[transparent] border-b border-black text-black ')
       setIsInverted(true)
     }else if(location.pathname === "/services"){
-      setStickyClass('absolute w-full z-50 bg-[transparent] border-b border-black text-black ')
+      setStickyClass('absolute w-full z-50 bg-[transparent] border-b border-black text-black')
       setIsInverted(true)
     }
     return () => {
@@ -52,7 +52,8 @@ function App() {
 	 const stickyNavbar = () => {
     if (window !== undefined) {
       let windowHeight = window.scrollY;
-      windowHeight > 600 ? setStickyClass('fixed top-0 left-0 z-50 bg-white w-full text-[#1b1b1b] border-b border-gray') : setStickyClass('absolute w-full z-50 bg-[transparent] border-b border-white text-white');
+      windowHeight > 600 && setStickyClass('fixed top-0 left-0 z-50 bg-white w-full text-[#1b1b1b] border-b border-gray') 
+      // : setStickyClass('absolute w-full z-50 text-white bg-[transparent] border-b border-white text-white');
     }
   };
   

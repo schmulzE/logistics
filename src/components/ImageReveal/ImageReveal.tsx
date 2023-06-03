@@ -51,7 +51,7 @@ const SectionOne = ({image, color} : {image: string, color: string}) => {
                 // start: "top center -=20%",
                 // end: "bottom center",
                 start: "top bottom",
-                toggleActions: "restart none none reset",
+                toggleActions: "restart none none none",
                 markers: true,
             }
         })
@@ -68,14 +68,14 @@ const SectionOne = ({image, color} : {image: string, color: string}) => {
     
 
   return (
-    <div id="section-2" className={`grid grid-cols-3 px-32 py-48 overflow-hidden bg-[${color}]`}>
-      <div className='border-r border-gray'>
-        <h1 className='text-3xl font-bold pr-4'>fast and reliable <br/>shipping services</h1>
-        <p className='py-8 pr-4 text-gray text-base'>Lorem, ipsum dolor sit amet consectetur ipsum dolor sit. <br/>A at facere eaque asperiores vero dolores ipsum dolor sit.</p>
+    <div id="section-2" className={`grid lg:grid-cols-3 lg:px-32 px-8 py-24 lg:py-48 text-center overflow-hidden bg-[${color}]`}>
+      <div className='lg:border-r border-gray order-2 lg:order-1 col-span-2'>
+        <h1 className='text-3xl font-medium lg:pr-4'>Fast and reliable <br/>shipping services</h1>
+        <p className='py-8 lg:pr-4 text-left text-gray text-base'>Lorem, ipsum dolor sit amet consec tetur ipsum dolor sit. <br className="hidden lg:block"/>A at facere eaque asperiores vero dolores ipsum dolor sit.</p>
       <hr className='text-gray'/>
-      <Link to='' className='cursor-none flex a'>
+      <Link to='' className='cursor-none flex a pt-10'>
         <div className='text-xl bg-[#39ff14] rounded-full w-12 h-12 cursor-none mt-4'>
-          <AiOutlinePlus className='inline mt-3.5 ml-3.5 glyphicon'/>
+          <AiOutlinePlus className='inline mt-3.5 lg:ml-3.5 glyphicon'/>
         </div>
         <p className='mt-5 ml-5 capitalize text-xs font-medium'>view more <br/> about our services</p>
       </Link>
@@ -86,7 +86,7 @@ const SectionOne = ({image, color} : {image: string, color: string}) => {
         <img src={image} alt="overlay-image"/>
     </figure> */}
 
-    <div ref={containerRef} className={"project_single ml-20 col-span-2"}>
+    <div ref={containerRef} className={"project_single h-auto mb-10 lg:h-[300px] lg:ml-20 col-span-2 order-1 lg:order-2"}>
       <div ref={wrapperRef} className='project_single_image-wrapper'>
         <img ref={imageRef} src={image} alt="overlay-image" className='project_single_image' />
       </div>

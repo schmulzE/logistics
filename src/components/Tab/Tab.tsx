@@ -84,18 +84,18 @@ const Tab = () => {
   
 
   return (
-    <div id="section-3" className='bg-[#fff] px-32 py-36' >
+    <div id="section-3" className='bg-[#fff] lg:px-32 px-16 py-36' >
       <div className="flex flex-wrap gap-3">
        <div className="w-full relative">
           <ul
-            className="flex mb-0 list-none  pt-4 flex-row text-left"
+            className="flex mb-0 list-none pt-4 flex-col content-start lg:flex-row w-[52%] lg:w-full"
             role="tablist"
             >
             {TabList.map((item) => ( 
-            <li key={item.id} ref={tabListRef} className={"-mb-px last:mr-0 flex-auto text-center " + (openTab !== item.id && `${styles["tab-link"]}`)}>
+            <li key={item.id} ref={tabListRef} className={"-mb-px last:mr-0 lg:flex-auto lg:text-center " + (openTab !== item.id && `${styles["tab-link"]}`)}>
               <a
                 className={
-                  "text-sm md:text-lg font-medium px-5 py-4 cursor-none block leading-normal" +
+                  "text-sm md:text-lg font-medium lg:px-5 py-4 cursor-none block leading-normal" +
                   (openTab === item.id
                     ? "border-[#39ff14] border-b-[3px] border-b-[#39ff17] relative z-30"
                     : "outline-gray-light outline-1")
@@ -113,18 +113,18 @@ const Tab = () => {
             </li>
             ))}
           </ul>
-          <hr className='absolute w-full top-[77.5px] text-gray '/>
+          <hr className='lg:absolute w-full lg:top-[77.5px] text-gray block'/>
           <div className="relative flex flex-col min-w-0 break-words w-full mb-6">
             <div className="py-5 flex-auto">
               <div className="tab-content tab-space">
                {TabList.map((item) => ( 
                   <div key={item.id} ref={divsRef} className={openTab === item.id ? "block" : "hidden"} id="link">
-                  <div className="grid grid-cols-2 gap-10 mt-8">
+                  <div className="lg:grid grid-cols-2 gap-10 mt-8">
                      <div className="image-container">
                         <img src={item.image} width={800}/>
                      </div>
-                     <div className="text-container px-16">
-                        <h1  className="text-3xl font-bold mb-5 title">Secure courier<br/> for small & big packages</h1>
+                     <div className="text-container lg:px-16">
+                        <h1  className="text-3xl font-bold mb-5 title mt-8 lg:mt-0">Secure courier<br/> for small & big packages</h1>
                         <p className='mb-5 text'>{item.text}</p>
                         <hr/>
                         <Link  to='' className='cursor-none flex a'>

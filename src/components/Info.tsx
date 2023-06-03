@@ -1,8 +1,8 @@
 const Info = ({background, text, classes}: {background: string, text: string, classes: string}) => {
     return (
-      <div id="section-5" className={background + " xs:py-48 lg:py-24 "}>
+      <div id="section-5" className={background + " py-24 "}>
         <h1 className="text-5xl font-medium my-24 capitalize">{text}</h1>
-        <ul className={classes + " grid grid-cols-4 gap-10 "}>
+        <ul className={classes + " grid grid-flow-row gap-10 lg:grid-cols-4 lg:gap-10 "}>
           <li>
             <img src="https://globefarer.qodeinteractive.com/wp-content/uploads/2021/08/landing-icon-3.png" alt="" />
             <h3 className="capitalize text-xl my-4 font-medium">ocean freight</h3>
