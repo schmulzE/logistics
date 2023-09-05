@@ -34,7 +34,7 @@ const Footer = () => {
   const stickyNavbar = () => {
     if (window !== undefined) {
       let windowHeight = window.scrollY;
-      windowHeight < 25 ? LinkRef.current?.classList.add("hidden") : LinkRef.current?.classList.remove("hidden");
+      windowHeight < 15 ? LinkRef.current?.classList.add("hidden") : LinkRef.current?.classList.remove("hidden");
     }
   };
 
@@ -86,8 +86,14 @@ const Footer = () => {
       </li>
      </ul>
      <hr className="text-[#929292]" />
-     <div className="text-center text-[#929292] text-sm mt-4">© 2023 schmulzCode, All Rights Reserved</div>
-     <Link to="#" ref={LinkRef} onClick={onScrollTop} onMouseEnter={e => setIconHover(true)} onMouseLeave={e => setIconHover(false)}  className="fixed right-0 bottom-0 w-16 h-16 rounded-full mb-8 mr-8 bg-[#39ff14] z-[10000] cursor-none transition duration-700 ease-in-out">{iconHover ? <HiArrowUp className='text-black ml-4 mt-4 transition duration-700 ease-in-out' size={30}/> :<HiOutlineChevronUp className='text-black ml-4 mt-4 transition duration-700 ease-in-out' size={30}/>}</Link>
+     <div className="text-center text-[#929292] text-sm my-4">© 2023 schmulzCode, All Rights Reserved</div>
+     <Link to="#" ref={LinkRef} onClick={onScrollTop} onMouseEnter={e => setIconHover(true)}  className=" fixed right-0 bottom-0 w-16 h-16 rounded-full mb-8 mr-8 bg-[#39ff14] z-[10000] cursor-none transition duration-700 ease-in-out">
+        <div id="arrow_1" className="arrow-wrapper">
+          <div className="arrow arrow--left">
+            <span></span>
+          </div>
+        </div>
+      </Link>
   </footer>
   )
 }
