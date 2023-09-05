@@ -46,7 +46,7 @@ const INITIAL_DATA: FormData = {
   other: 'other',
 }
 
-const RequestFreight = ({setIsInverted} : {setIsInverted: Dispatch<boolean>}) => {
+const RequestFreight = () => {
   const [data, setData] = useState(INITIAL_DATA)
 
   const updateFields = (fields: Partial<FormData>) => {
@@ -69,17 +69,17 @@ const RequestFreight = ({setIsInverted} : {setIsInverted: Dispatch<boolean>}) =>
 
   return (
     <div>
-      <div  id='section-2' onMouseEnter={e => setIsInverted(true)} onMouseLeave={e => setIsInverted(false)} className="p-44 bg-[#39ff14] capitalize text-6xl font-bold" >
+      <div data-cursor="invert" id='section-2' className="lg:p-44 py-44 px-8 bg-[#39ff14] capitalize lg:text-6xl text-4xl font-semibold lg:font-bold" >
         step {currentStepIndex + 1} / {steps.length}
       </div>
       {/* <StepIndex currentStepIndex={currentStepIndex} steps={steps}/> */}
       <div className='bg-[#dfdfdf my-32'>
-        <form onSubmit={onSubmit} className='px-40 cursor-none'>
+        <form onSubmit={onSubmit} className='lg:px-40 px-8 cursor-none'>
          
           {step}
 
           {!isFirstStep && (<button type="button" onClick={back} className='bg-[#39ff14] mt-10 mr-4 p-2.5 font-medium uppercase text-black'><HiOutlineChevronLeft size={22} className="inline-block"/> prev step </button>)}
-          <button type="submit" className='bg-[#39ff14] mt-10 p-2.5 font-medium uppercase text-black'>{isLastStep ? 'submit' : 'next step' }<HiOutlineChevronRight size={22} className="inline-block"/></button>
+          <button data-cursor="click" type="submit" className='bg-[#39ff14] mt-10 cursor-none p-2.5 font-medium uppercase text-black'>{isLastStep ? 'submit' : 'next step' }<HiOutlineChevronRight size={22} className="inline-block"/></button>
         </form>
       </div>
     </div>
