@@ -2,12 +2,12 @@ import React, { Dispatch } from 'react'
 import { AiOutlinePlus } from 'react-icons/ai'
 import { Link } from 'react-router-dom'
 
-const Brochure = ({setIsInverted} : {setIsInverted: Dispatch<boolean>}) => {
+const Brochure = () => {
   return (
    <div className='flex flex-col my-16'>
-    <div onMouseEnter={e => setIsInverted(true)} onMouseLeave={e => setIsInverted(false)} className="px-8 py-10 bg-[#39ff14] ">
-      <p className="text-sm my-5">Download Brochure</p>
-      <p className="text-3xl font-medium">Our Services Brochure</p>
+    <div data-cursor="invert" className="px-8 py-10 bg-[#39ff14] ">
+      <p data-cursor="invert" className="text-sm my-5">Download Brochure</p>
+      <p data-cursor="invert" className="text-3xl font-medium">Our Services Brochure</p>
     </div>
     <div className="p-4 bg-[#1b1b1b] text-white z-[9999]">
       <Link to='' className='cursor-none flex a'>
