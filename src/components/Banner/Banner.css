@@ -8,22 +8,32 @@
 
 @media (min-aspect-ratio: 16/9) {
   .videoBg{
-   
     width: 100%;
     height: auto;
   }
 }
 @media (max-aspect-ratio: 16/9) {
-  .videoBg {
-   
-   width:100%; 
+  .videoBg { 
+    width:100%; 
     height: 100%;
-
     padding:0
   }
 }
 
 video{
 object-fit:fill
-
 }
+
+/* .swiper-pagination {
+  position: absolute;
+  text-align: center;
+  transition: 0.3s opacity;
+  transform: translate3d(0, 0, 0);
+  z-index: 10;
+  max-width: 760px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px;
+} */
+
