@@ -1,0 +1,33 @@
+#adaptive-cursor {
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.25);
+  border-radius: 50%;
+  color: rgba(255, 255, 255, 0);
+  font-size: 20px;
+  height: 0;
+  justify-content: center;
+  line-height: 1.5;
+  padding: 5px;
+  pointer-events: none;
+  position: fixed;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  transition: color 0.5s ease;
+  width: 0;
+  white-space: nowrap;
+  z-index: 100;
+  display: none;
+}
+#adaptive-cursor.has-label-state, #adaptive-cursor.has-icon-state {
+  color: black;
+  transition-delay: 0.3s;
+}
+#adaptive-cursor.has-icon-state .material-icons {
+  font-size: 65px;
+}
+
+@media (min-width:961px)  { /* tablet, landscape iPad, lo-res laptops ands desktops */
+  #adaptive-cursor {
+    display: flex;
+  }
+}
